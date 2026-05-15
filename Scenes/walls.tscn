@@ -10,7 +10,3 @@ b = Vector2(0, 681)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=316895681]
 shape = SubResource("SegmentShape2D_kjpe2")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1130573713]
-position = Vector2(1152, 0)
-shape = SubResource("SegmentShape2D_kjpe2")
