@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://blge6ruu8w3sq"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_kjpe2"]
+a = Vector2(0, -80)
+b = Vector2(0, 681)
+
+[node name="Wall" type="StaticBody2D" unique_id=1459464629]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1844115230]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=316895681]
+shape = SubResource("SegmentShape2D_kjpe2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1130573713]
+position = Vector2(1152, 0)
+shape = SubResource("SegmentShape2D_kjpe2")
