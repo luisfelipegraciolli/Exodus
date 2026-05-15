@@ -1,30 +1,11 @@
 [gd_scene format=3 uid="uid://bwstw7xghinxc"]
 
 [ext_resource type="PackedScene" uid="uid://blge6ruu8w3sq" path="res://Scenes/walls.tscn" id="1_qxrlw"]
-[ext_resource type="Texture2D" uid="uid://cnh2nh84d8o87" path="res://icon.svg" id="2_wrm1d"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qxrlw"]
-bounce = 1.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_qxrlw"]
-radius = 30.0
 
 [node name="Game" type="Node" unique_id=486389207]
 
 [node name="Wall" parent="." unique_id=1459464629 instance=ExtResource("1_qxrlw")]
 position = Vector2(2, 44)
 
-[node name="Wall2" parent="." unique_id=820337524 instance=ExtResource("1_qxrlw")]
-position = Vector2(791, 650)
-rotation = 1.5707964
-
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1259772915]
-position = Vector2(513, 177)
-physics_material_override = SubResource("PhysicsMaterial_qxrlw")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1761224969]
-shape = SubResource("CircleShape2D_qxrlw")
-
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=407969343]
-position = Vector2(0, -1)
-texture = ExtResource("2_wrm1d")
+[node name="Wall2" parent="." unique_id=717941434 instance=ExtResource("1_qxrlw")]
+position = Vector2(1152, 44)
