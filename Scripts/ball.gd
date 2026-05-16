@@ -8,3 +8,7 @@ func _process(delta: float) -> void:
 	var colision_info: KinematicCollision2D = move_and_collide(direction) 
 	if colision_info: 
 		velocity = velocity.bounce(colision_info.get_normal())
+		var collider: Object = colision_info.get_collider()
+		print(collider)
+		if collider is Brick:
+			collider.queue_free()

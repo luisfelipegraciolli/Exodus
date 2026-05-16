@@ -44,7 +44,6 @@ _data = {
 }
 
 [node name="Ball" type="RigidBody2D" unique_id=1597288888]
-position = Vector2(252, 149)
 gravity_scale = 0.0
 script = ExtResource("1_ij5cq")
 
