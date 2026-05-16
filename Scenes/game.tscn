@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bwstw7xghinxc"]
 
 [ext_resource type="PackedScene" uid="uid://blge6ruu8w3sq" path="res://Scenes/walls.tscn" id="1_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://cwk23sw0nao72" path="res://Scenes/paddle.tscn" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://3wq2gimrg2dl" path="res://Scenes/ball.tscn" id="3_wrm1d"]
 
 [node name="Game" type="Node" unique_id=486389207]
 
@@ -9,3 +11,14 @@ position = Vector2(2, 44)
 
 [node name="Wall2" parent="." unique_id=717941434 instance=ExtResource("1_qxrlw")]
 position = Vector2(1152, 44)
+
+[node name="Celling" parent="." unique_id=702873637 instance=ExtResource("1_qxrlw")]
+position = Vector2(1256, 0)
+rotation = 1.5707964
+scale = Vector2(2, 2)
+
+[node name="Paddle" parent="." unique_id=1357732362 instance=ExtResource("2_qxrlw")]
+position = Vector2(808, 576)
+
+[node name="Ball" parent="." unique_id=1597288888 instance=ExtResource("3_wrm1d")]
+position = Vector2(452, 261)
