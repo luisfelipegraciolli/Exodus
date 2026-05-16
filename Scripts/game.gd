@@ -40,8 +40,6 @@ func spawn_bricks() -> void:
 		brick_position.x = initial_position.x
 		# Adds brick y value offset to start next row
 		brick_position.y += offset_y
-		
-
 
 func _on_ball_scored() -> void:
 	player_score += 1
