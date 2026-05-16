@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://bwstw7xghinxc"]
 
+[ext_resource type="Script" uid="uid://cvm0gib0fyhun" path="res://Scripts/game.gd" id="1_3dryh"]
 [ext_resource type="PackedScene" uid="uid://blge6ruu8w3sq" path="res://Scenes/walls.tscn" id="1_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://cwk23sw0nao72" path="res://Scenes/paddle.tscn" id="2_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://3wq2gimrg2dl" path="res://Scenes/ball.tscn" id="3_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://sieffkfaarl8" path="res://Scenes/brick.tscn" id="4_3dryh"]
 
 [node name="Game" type="Node" unique_id=486389207]
+script = ExtResource("1_3dryh")
+brickScene = ExtResource("4_3dryh")
 
 [node name="LeftWall" parent="." unique_id=1459464629 instance=ExtResource("1_qxrlw")]
 position = Vector2(2, 44)
