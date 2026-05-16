@@ -1,8 +1,10 @@
 extends RigidBody2D
 
-@export var velocity_vec: Vector2 = Vector2(250, 250)
+@export var velocity: Vector2 = Vector2(250, 250)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var direction: Vector2 = velocity_vec * delta
-	move_and_collide(direction) 
+	var direction: Vector2 = velocity * delta
+	var colision_info: KinematicCollision2D = move_and_collide(direction) 
+	if colision_info: 
+		velocity = velocity.bounce(colision_info.get_normal())
