@@ -2,7 +2,7 @@ extends Node
 @export var brickScene: PackedScene
 @export var brick_size: int = 64
 @export var offset_x: int = 8
-@export var offset_y: int = 32
+@export var offset_y: int = 16
 @export var rows: int = 8
 @export var columns: int = 16
 const initial_position: Vector2 =  Vector2 (32, 24)
