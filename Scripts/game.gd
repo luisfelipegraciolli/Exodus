@@ -1,23 +1,24 @@
 extends Node
 @export var brickScene: PackedScene
 @export var brick_size: int = 64
-@export var offset_acum_x: int = 8
-@export var offset_acum_y: int = 8
-@export var offset: int = 8
+@export var offset_x: int = 8
 @export var offset_y: int = 32
-var initial_pos: Vector2 = Vector2 (32, 24)
+@export var rows: int = 8
+@export var columns: int = 16
+const initial_position: Vector2 =  Vector2 (32, 24)
+var brick_position: Vector2 = initial_position
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Spawn bricks
-
-	for i: int in range(0,8):
-		for j: int in range(0,16):
+	
+	for i: int in range(0, rows):
+		for j: int in range(0, columns):
 			var brick: StaticBody2D = brickScene.instantiate()
-			brick.position.y = initial_pos.y
-			brick.position.x = initial_pos.x + offset_acum_x
-			offset_acum_x += brick_size + offset
+			brick.position.y = brick_position.y
+			brick.position.x = brick_position.x 
 			add_child(brick)
+			brick_position.x += offset_x + brick_size
 		# reset initial x value for next row	
-		offset_acum_x = 8
+		brick_position.x = initial_position.x
 		# Adds brick y value offset to start next row
-		initial_pos.y = initial_pos.y + offset_y
+		brick_position.y += offset_y
