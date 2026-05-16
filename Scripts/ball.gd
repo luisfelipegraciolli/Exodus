@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 @export var velocity: Vector2 = Vector2(250, 250)
-
+signal scored
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var direction: Vector2 = velocity * delta
@@ -12,3 +12,4 @@ func _process(delta: float) -> void:
 		print(collider)
 		if collider is Brick:
 			collider.queue_free()
+			scored.emit()

@@ -7,6 +7,9 @@ extends Node
 @export var columns: int = 16
 const initial_position: Vector2 =  Vector2 (32, 24)
 var brick_position: Vector2 = initial_position
+
+var player_score: int = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	spawn_bricks()
@@ -38,4 +41,8 @@ func spawn_bricks() -> void:
 		# Adds brick y value offset to start next row
 		brick_position.y += offset_y
 		
-		
+
+
+func _on_ball_scored() -> void:
+	player_score += 1
+	print(player_score)
