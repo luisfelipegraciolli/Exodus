@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bwstw7xghinxc"]
 
 [ext_resource type="PackedScene" uid="uid://blge6ruu8w3sq" path="res://Scenes/walls.tscn" id="1_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://cwk23sw0nao72" path="res://Scenes/paddle.tscn" id="2_qxrlw"]
 
 [node name="Game" type="Node" unique_id=486389207]
 
@@ -9,3 +10,6 @@ position = Vector2(2, 44)
 
 [node name="Wall2" parent="." unique_id=717941434 instance=ExtResource("1_qxrlw")]
 position = Vector2(1152, 44)
+
+[node name="Paddle" parent="." unique_id=1357732362 instance=ExtResource("2_qxrlw")]
+position = Vector2(484, 561)
