@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cwk23sw0nao72"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rripy"]
+size = Vector2(62, 20)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_nxw3c"]
+
+[node name="Paddle" type="CharacterBody2D" unique_id=1357732362]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=420922749]
+shape = SubResource("RectangleShape2D_rripy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1462596454]
+modulate = Color(0.83499736, 0.5770178, 1, 1)
+position = Vector2(-1.9073486e-06, 0.5)
+scale = Vector2(62.000004, 21)
+texture = SubResource("CanvasTexture_nxw3c")
